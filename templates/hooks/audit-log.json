@@ -1,0 +1,14 @@
+{
+  "name": "Audit Log",
+  "description": "Log all tool usage for auditing purposes",
+  "config": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          "echo \"$(date): Tool used: $CLAUDE_TOOL_NAME\" >> .claude/audit.log"
+        ]
+      }
+    ]
+  }
+}

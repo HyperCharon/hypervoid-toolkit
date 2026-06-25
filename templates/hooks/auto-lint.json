@@ -1,0 +1,14 @@
+{
+  "name": "Auto Lint",
+  "description": "Automatically run linter after file edits",
+  "config": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          "npx eslint $CLAUDE_FILE_PATH --fix"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "categories": [
+    {
+      "name": "Code Review",
+      "icon": "[SEARCH]",
+      "prompts": [
+        {
+          "title": "Standard Code Review",
+          "prompt": "Review the following code for:\n- Bugs and logic errors\n- Security vulnerabilities (SQL injection, XSS, CSRF, etc.)\n- Performance issues and bottlenecks\n- Edge cases and error handling\n- Memory leaks and resource management\n- Code style and best practices\n\nCode: $ARGUMENTS"
+        },
+        {
+          "title": "Security Audit",
+          "prompt": "Perform a thorough security audit on the following code. Focus on:\n- Input validation and sanitization\n- Authentication and authorization flaws\n- Data exposure risks\n- Injection vulnerabilities\n- Dependency vulnerabilities\n- Cryptographic issues\n\nCode: $ARGUMENTS"
+        },
+        {
+          "title": "Performance Analysis",
+          "prompt": "Analyze the performance of the following code. Look for:\n- Time complexity issues (O(n^2) or worse)\n- Unnecessary iterations or recursion\n- Memory allocation patterns\n- Database query optimization\n- Caching opportunities\n- Async/parallel execution opportunities\n\nCode: $ARGUMENTS"
+        }
+      ]
+    },
+    {
+      "name": "Test Generation",
+      "icon": "[TEST]",
+      "prompts": [
+        {
+          "title": "Unit Tests",
+          "prompt": "Write comprehensive unit tests for the following code. Include:\n- Happy path tests\n- Edge cases (null, empty, boundary values)\n- Error handling tests\n- Mock external dependencies\n- Aim for >90% code coverage\n\nCode: $ARGUMENTS"
+        },
+        {
+          "title": "Integration Tests",
+          "prompt": "Design integration tests for the following component. Cover:\n- Component interactions\n- API contract testing\n- Database integration\n- Error propagation\n- Race conditions\n\nCode: $ARGUMENTS"
+        },
+        {
+          "title": "E2E Tests",
+          "prompt": "Create end-to-end test scenarios for the following feature. Include:\n- User journey flows\n- Cross-browser considerations\n- Accessibility checks\n- Performance assertions\n- Error recovery flows\n\nFeature: $ARGUMENTS"
+        }
+      ]
+    },
+    {
+      "name": "Refactoring",
+      "icon": "[REFACTOR]",
+      "prompts": [
+        {
+          "title": "Code Refactoring",
+          "prompt": "Refactor the following code to improve:\n- Readability and maintainability\n- Apply SOLID principles\n- Remove code duplication\n- Improve naming conventions\n- Extract reusable functions/classes\n- Add proper type annotations\n\nCode: $ARGUMENTS"
+        },
+        {
+          "title": "Architecture Improvement",
+          "prompt": "Analyze and suggest architectural improvements for:\n- Separation of concerns\n- Dependency injection\n- Event-driven patterns\n- Scalability considerations\n- Error handling strategy\n\nCode: $ARGUMENTS"
+        },
+        {
+          "title": "TypeScript Type Optimization",
+          "prompt": "Improve TypeScript types for the following code:\n- Replace 'any' with proper types\n- Add generics where appropriate\n- Use discriminated unions\n- Add JSDoc comments\n- Ensure type safety\n\nCode: $ARGUMENTS"
+        }
+      ]
+    },
+    {
+      "name": "Documentation",
+      "icon": "[DOC]",
+      "prompts": [
+        {
+          "title": "API Documentation",
+          "prompt": "Generate comprehensive API documentation for the following code. Include:\n- Endpoint descriptions\n- Request/response schemas\n- Authentication requirements\n- Error codes and handling\n- Usage examples\n- Rate limiting info\n\nCode: $ARGUMENTS"
+        },
+        {
+          "title": "README Generator",
+          "prompt": "Generate a professional README.md for this project. Include:\n- Project description and features\n- Installation instructions\n- Configuration guide\n- Usage examples\n- API reference\n- Contributing guidelines\n- License info\n\nProject: $ARGUMENTS"
+        },
+        {
+          "title": "Code Comments",
+          "prompt": "Add comprehensive comments to the following code:\n- Function/method documentation (JSDoc/docstring)\n- Complex logic explanations\n- TODO/FIXME annotations\n- Parameter descriptions\n- Return value descriptions\n- Example usage\n\nCode: $ARGUMENTS"
+        }
+      ]
+    },
+    {
+      "name": "Debugging",
+      "icon": "[BUG]",
+      "prompts": [
+        {
+          "title": "Error Analysis",
+          "prompt": "Diagnose the following error. Provide:\n- Root cause analysis\n- Step-by-step fix\n- Prevention strategies\n- Related issues to check\n\nError: $ARGUMENTS"
+        },
+        {
+          "title": "Log Analysis",
+          "prompt": "Analyze the following log output. Identify:\n- Error patterns\n- Timeline of events\n- Potential root causes\n- Recommended actions\n\nLogs: $ARGUMENTS"
+        },
+        {
+          "title": "Stack Trace Analysis",
+          "prompt": "Analyze the following stack trace. Provide:\n- The exact failure point\n- The call chain that led to the error\n- Common causes for this type of error\n- Suggested fixes\n\nStack trace: $ARGUMENTS"
+        }
+      ]
+    },
+    {
+      "name": "DevOps",
+      "icon": "[ROCKET]",
+      "prompts": [
+        {
+          "title": "Docker Optimization",
+          "prompt": "Optimize the Dockerfile/docker-compose for:\n- Multi-stage builds\n- Layer caching\n- Security hardening\n- Image size reduction\n- Health checks\n\nConfig: $ARGUMENTS"
+        },
+        {
+          "title": "CI/CD Pipeline",
+          "prompt": "Design a CI/CD pipeline for this project. Include:\n- Build stages\n- Test automation\n- Security scanning\n- Deployment strategy\n- Rollback plan\n\nProject: $ARGUMENTS"
+        },
+        {
+          "title": "Monitoring and Alerts",
+          "prompt": "Design a monitoring and alerting strategy. Include:\n- Key metrics to track\n- Alert thresholds\n- Dashboard design\n- Incident response procedures\n- SLA definitions\n\nService: $ARGUMENTS"
+        }
+      ]
+    },
+    {
+      "name": "代码生成",
+      "icon": "[CODE]",
+      "prompts": [
+        {
+          "title": "React 组件",
+          "prompt": "Create a production-ready React component with the following requirements:\n- TypeScript with proper type definitions\n- Functional component with hooks\n- Proper prop validation and defaults\n- Accessibility (ARIA attributes)\n- Responsive design\n- Error boundary handling\n- Unit test structure\n\nRequirements: $ARGUMENTS"
+        },
+        {
+          "title": "REST API",
+          "prompt": "Design and implement a RESTful API endpoint with:\n- OpenAPI/Swagger specification\n- Input validation and sanitization\n- Proper HTTP status codes and error responses\n- Authentication/authorization middleware\n- Rate limiting\n- Pagination support\n- Request/response DTOs\n\nRequirements: $ARGUMENTS"
+        },
+        {
+          "title": "CLI 工具",
+          "prompt": "Build a command-line tool with:\n- Argument parsing (flags, subcommands, positional args)\n- Help text and usage examples\n- Colored output and progress indicators\n- Configuration file support\n- Graceful error handling\n- Cross-platform compatibility\n- Verbose/debug mode\n\nRequirements: $ARGUMENTS"
+        },
+        {
+          "title": "数据库 Schema",
+          "prompt": "Design a database schema with:\n- Normalized table structure (3NF)\n- Proper indexes for query patterns\n- Foreign key constraints\n- Audit columns (created_at, updated_at)\n- Migration scripts (up and down)\n- Seed data for development\n- Query optimization notes\n\nRequirements: $ARGUMENTS"
+        },
+        {
+          "title": "Docker 配置",
+          "prompt": "Create a complete Docker setup with:\n- Multi-stage Dockerfile for optimized builds\n- docker-compose.yml with all services\n- Volume mounts and networking\n- Environment variable configuration\n- Health checks for all services\n- .dockerignore file\n- Production and development profiles\n\nRequirements: $ARGUMENTS"
+        }
+      ]
+    },
+    {
+      "name": "数据科学",
+      "icon": "[DATA]",
+      "prompts": [
+        {
+          "title": "数据分析",
+          "prompt": "Perform a comprehensive data analysis on the following dataset:\n- Data profiling (shape, types, missing values, distributions)\n- Statistical summary and key metrics\n- Correlation analysis between variables\n- Outlier detection and handling\n- Data quality assessment\n- Key insights and actionable findings\n- Visualization recommendations\n\nDataset: $ARGUMENTS"
+        },
+        {
+          "title": "数据可视化",
+          "prompt": "Create data visualizations for the following analysis:\n- Choose appropriate chart types for each data dimension\n- Use matplotlib/seaborn/plotly best practices\n- Include proper labels, titles, legends\n- Apply consistent color palette and styling\n- Add annotations for key insights\n- Create both static and interactive versions\n- Export in high-resolution formats\n\nData/Analysis: $ARGUMENTS"
+        },
+        {
+          "title": "机器学习模型",
+          "prompt": "Build a machine learning model pipeline:\n- Data preprocessing (scaling, encoding, imputation)\n- Feature selection and engineering\n- Model selection with cross-validation\n- Hyperparameter tuning (GridSearch/Optuna)\n- Evaluation metrics appropriate for the task\n- Model interpretation (SHAP/feature importance)\n- Model serialization and serving\n- Monitoring for data/model drift\n\nProblem: $ARGUMENTS"
+        },
+        {
+          "title": "特征工程",
+          "prompt": "Design a feature engineering pipeline:\n- Numerical transformations (log, polynomial, binning)\n- Categorical encoding (one-hot, target, frequency)\n- Date/time feature extraction\n- Text feature extraction (TF-IDF, embeddings)\n- Interaction features\n- Aggregation features (rolling, group-by stats)\n- Feature selection (mutual info, LASSO, RFE)\n- Feature store integration\n\nDataset: $ARGUMENTS"
+        }
+      ]
+    }
+  ]
+}

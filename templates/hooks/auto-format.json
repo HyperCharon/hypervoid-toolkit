@@ -1,0 +1,14 @@
+{
+  "name": "Auto Format",
+  "description": "Automatically format code after file edits",
+  "config": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          "npx prettier --write $CLAUDE_FILE_PATH"
+        ]
+      }
+    ]
+  }
+}

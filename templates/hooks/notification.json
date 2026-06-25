@@ -1,0 +1,13 @@
+{
+  "name": "Notification",
+  "description": "Show system notification when Claude needs attention",
+  "config": {
+    "Notification": [
+      {
+        "hooks": [
+          "osascript -e 'display notification \"Claude needs your attention\" with title \"Claude Code\"'"
+        ]
+      }
+    ]
+  }
+}
